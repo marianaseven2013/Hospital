@@ -1,7 +1,11 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import javax.swing.*;
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
+
+   login login = new login();
 
                         //Doctor
                         //Enfermeras
@@ -17,6 +21,8 @@ public class Main {
                         //Sala de espera
                         //Morgue
                         //Sala Quírofano
+
+
 
     }
 
