@@ -1,4 +1,4 @@
-package personalMedico;
+package Model;
 
 public class Secretaria {
 }
