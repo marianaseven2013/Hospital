@@ -4,7 +4,7 @@ import Hospital.model.DoctorGeneral;
 
 import java.util.ArrayList;
 
-public class bdDoctores {
+public class DataDoctores {
     //public static String user [] = {"gmluch@scl.edu.gt","JKjeon@scl.edu.gt"};
     //ublic static String pass [] = {"1234Bang","1234tan"};
 

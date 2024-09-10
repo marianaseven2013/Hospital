@@ -1,5 +1,5 @@
-//Mis clases
-import DATA.bdDoctores;
+package Hospital.View;//Mis clases
+import Hospital.services.DataDoctores;
 import Hospital.model.DoctorGeneral;
 
 //Librerías
@@ -7,8 +7,8 @@ import javax.swing.*; //Crear interfaces grafias Metodos: JFrame, button etc
 import java.awt.*; //Eventos
 import java.util.ArrayList; //Crear listas de tipo Array
 
-public class login extends JFrame {
-    public login() {
+public class LoginView extends JFrame {
+    public LoginView() {
 
         //COFIGURACIÓN DE LA VENTANA
         this.setSize(1600,1800);
@@ -23,7 +23,7 @@ public class login extends JFrame {
         JPanel logoPanel = new JPanel(new GridBagLayout());
         logoPanel.setBackground(Color.black);
 
-        ImageIcon urlImg = new ImageIcon(getClass().getResource("img/logo.png"));
+        ImageIcon urlImg = new ImageIcon(getClass().getResource("resources/logo.png"));
         JLabel img = new JLabel();  //Para agregar imagen
         img.setIcon(urlImg); //Agregar la ruta
         logoPanel.add(img);
@@ -56,7 +56,7 @@ public class login extends JFrame {
         formpanel.add(btnIniciar);
 
         btnIniciar.addActionListener(e -> {
-            ArrayList<DoctorGeneral> dataDoctores = bdDoctores.listaDoctores();
+            ArrayList<DoctorGeneral> dataDoctores = DataDoctores.listaDoctores();
 
             for (DoctorGeneral cadaDoctor: dataDoctores){
                 if ( cadaDoctor.getCorreoElectronico().equalsIgnoreCase(emailField.getText())) {
