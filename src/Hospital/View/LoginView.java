@@ -4,89 +4,57 @@ import Hospital.model.DoctorGeneral;
 
 //Librerías
 import javax.swing.*; //Crear interfaces grafias Metodos: JFrame, button etc
+import javax.swing.border.MatteBorder;
 import java.awt.*; //Eventos
 import java.util.ArrayList; //Crear listas de tipo Array
 
 public class LoginView extends JFrame {
     public LoginView() {
 
-        //COFIGURACIÓN DE LA VENTANA
-        this.setSize(1600,1800);
+        this.setSize(650,700);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setTitle("Login");
 
-        //PANEL PRINCIPAL
         JPanel mainPanel = new JPanel(new GridLayout(1, 2));
-        mainPanel.setBackground(Color.green);
+        mainPanel.setBackground(Color.white);
 
-        //PRIMER PANEL del banner
-        JPanel logoPanel = new JPanel(new GridBagLayout());
-        logoPanel.setBackground(Color.black);
+        JLabel email = new JLabel("Correo: ");
+        email.setForeground(Color.gray);
+        email.setFont(new Font("Helvetica", Font.BOLD, 20));
+        email.setBounds(80,170,300,200);
+        email.setVisible(true);
 
-        ImageIcon urlImg = new ImageIcon(getClass().getResource("resources/logo.png"));
-        JLabel img = new JLabel();  //Para agregar imagen
-        img.setIcon(urlImg); //Agregar la ruta
-        logoPanel.add(img);
-
-        logoPanel.add(img);
-
-        JPanel formpanel = new JPanel(new GridBagLayout());
-        formpanel.setBackground(Color.yellow);
-
-        GridBagConstraints restricciones = new GridBagConstraints();
-        restricciones.gridx = 0;
-        restricciones.gridy = 0;
-
-        JLabel email = new JLabel("Email");
         JTextField emailField = new JTextField();
-        emailField.setPreferredSize(new Dimension(300, 40));
-        restricciones.gridx = 1;
-        restricciones.gridy = 1;
-        formpanel.add(email, restricciones);
+        emailField.setFont(new Font("Arial", Font.PLAIN, 18));
+        emailField.setBorder(new MatteBorder(0, 0, 1, 0, Color.gray));
+        emailField.setBounds(245, 240, 300, 40);
+        emailField.setVisible(true);
 
-        JTextField contrasenna = new JTextField();
-        contrasenna.setPreferredSize(new Dimension(300, 40));
+        JLabel contr = new JLabel("Contraseña: ");
+        contr.setForeground(Color.gray);
+        contr.setFont(new Font("Helvetica", Font.BOLD, 20));
+        contr.setBounds(80,270,600,200);
+        contr.setVisible(true);
+
         JPasswordField passwordField = new JPasswordField();
-        restricciones.gridx = 2; //Columna2
-        restricciones.gridy = 1; //Fila1
-        formpanel.add(contrasenna, restricciones);
+        passwordField.setFont(new Font("Arial", Font.PLAIN, 18));
+        passwordField.setBorder(new MatteBorder(0, 0, 1, 0, Color.gray));
+        passwordField.setBounds(245, 343, 300, 40);
+        passwordField.setVisible(true);
 
-        JButton btnIniciar = new JButton("Iniciar");
-        btnIniciar.setBounds(490, 480, 200, 45);
-        formpanel.add(btnIniciar);
+        JButton iniciar = new JButton("Iniciar Sesión");
+        iniciar.setBounds(245,410,300,38);
+        iniciar.setForeground(Color.white);
+        iniciar.setFont(new Font("Arial", Font.PLAIN, 18));
+        iniciar.setBackground(Color.lightGray);
+        this.add(iniciar);
 
-        btnIniciar.addActionListener(e -> {
-            ArrayList<DoctorGeneral> dataDoctores = DataDoctores.listaDoctores();
-
-            for (DoctorGeneral cadaDoctor: dataDoctores){
-                if ( cadaDoctor.getCorreoElectronico().equalsIgnoreCase(emailField.getText())) {
-                    if (cadaDoctor.getContrasenna().equalsIgnoreCase(passwordField.getText())) {
-                        //DoctorGeneral userDoctor = new DoctorGeneral();
-                        DoctorGeneral.Doctor();
-                    }
-
-                } else {
-                    JLabel msError = new JLabel("Error de Correo");
-                    msError.setForeground(Color.RED);
-                    formpanel.add(msError);
-                }
-            }
-            //(System.out.println("bdDoctores.user[0]");
-            //System.out.println("bdDoctores.pass[0]");
-
-
-
-            formpanel.revalidate();
-            formpanel.repaint();
-
-        });
-
-        mainPanel.add(logoPanel);
-        mainPanel.add(formpanel);
-
+        this.add(emailField);
+        this.add(passwordField);
+        this.add(contr);
+        this.add(email);
         this.add(mainPanel);
         this.setVisible(true);
-
-
     }
 }
