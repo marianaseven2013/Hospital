@@ -1,9 +1,11 @@
 import Hospital.View.LoginView;
+import Hospital.controller.loginController;
 
 public class Main {
     public static void main(String[] args) {
 
-        LoginView loginViewHospital = new LoginView();
+        LoginView loginView = new LoginView();
+        loginController controlLogin = new loginController(loginView);
 
 
 
