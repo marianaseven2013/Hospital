@@ -1,26 +1,31 @@
 package Hospital.services;
 
 import Hospital.model.DoctorGeneral;
-
 import java.util.ArrayList;
 
 public class DataDoctores {
-    //public static String user [] = {"gmluch@scl.edu.gt","JKjeon@scl.edu.gt"};
-    //ublic static String pass [] = {"1234Bang","1234tan"};
 
-    public static ArrayList listaDoctores(){
-        ArrayList<DoctorGeneral> doctores= new ArrayList<>();
-        doctores.add(new DoctorGeneral("Genesis","Luch","Cirujano",
-                "aksmkmc@alksm","sdf"));
-        doctores.add(new DoctorGeneral("JJAYKAA","Joons","Cirujano",
-                "kajdk@sdnc","2398785"));
-        doctores.add(new DoctorGeneral("JinJin","JINs","Cirujano",
-                "kajsk@sdnc","2ff8785"));
-        doctores.add(new DoctorGeneral("Agustina","Jooniii","Cirujano",
-                "ksjdsd@sdnc","2sd8785"));
+    private ArrayList<DoctorGeneral> data;
 
+    public DataDoctores() {
+        data = new ArrayList<>();
 
-        return doctores;
+        data.add(new DoctorGeneral("Dr. Juan Kook", "jjkkk.kook@bhospitaldd.com", "Cardiología", "jkkkook", "bag23"));
+        data.add(new DoctorGeneral("Dra. Jinna Kikm", "jinna.kikm@bhospitaldd.com", "Dermatología", "jinnakm", "tan43"));
+        data.add(new DoctorGeneral("Dr. Ricardo Morales", "ricardo.morales@bhospitaldd.com", "Pediatría", "ricardMo", "bamm56"));
+        data.add(new DoctorGeneral("Dra. Agustina Minn", "agustina.minn@bhospitaldd.com", "Traumatología", "agustM", "portyyea43"));
+        data.add(new DoctorGeneral("Dr. Tauren huyn", "tauren.huyn@bhospitaldd.com", "Neurología", "taurenh", "niagarapo"));
     }
-}
 
+    public DoctorGeneral login(String correo, String contraseña) {
+
+            for (DoctorGeneral doctor : data) {
+
+                if (doctor.getCorreo().equals(correo) && doctor.getContraseña().equals(contraseña)) {
+                    return doctor;
+                }
+            }
+            return null;
+        }
+
+    }
