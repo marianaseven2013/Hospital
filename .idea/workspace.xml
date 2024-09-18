@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91754244-62aa-48c4-9604-9ed4f419b121" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/backEnde/BackEnde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/View/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/View/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/model/DoctorGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/model/DoctorGeneral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/services/DataDoctores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/services/DataDoctores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +35,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;rm-backEnd&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/genesis/IdeaProjects/Hospital/src/img&quot;
+
   }
 }</component>
   <component name="RecentsManager">
