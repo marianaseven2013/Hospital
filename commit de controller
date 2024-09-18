@@ -1,0 +1,14 @@
+Vinculación de clase login controller
+Creación de objetos globales en LoginView
+ -emailField
+ -passwordField
+- loginButton
+Creación de métodos públicos de la clase LoginView
+-Obtener email
+-obtenerPassword
+-Asignar evento al boton de login
+ 	Creación y Métodos de la clase LoginController
+		-Objeto local de loginView
+		-Constructor que requiere un objeto 
+		-Uso del método para asignar un evento
+		-Creación de método para verificación de datos futuro

@@ -1,14 +1,9 @@
-package Hospital.View;//Mis clases
-import Hospital.services.DataDoctores;
-import Hospital.model.DoctorGeneral;
-import org.w3c.dom.events.EventListener;
+package Hospital.View;
 
-//Librerías
-import java.awt.event.ActionListener;
-import javax.swing.*; //Crear interfaces grafias Metodos: JFrame, button etc
+import javax.swing.*;
 import javax.swing.border.MatteBorder;
-import java.awt.*; //Eventos
-import java.util.ArrayList; //Crear listas de tipo Array
+import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class LoginView extends JFrame {
 
@@ -66,12 +61,13 @@ public class LoginView extends JFrame {
     }
 
     public String getCorreo() {
-        return emailField.getText();
+        return emailField.getText().trim();
     }
 
     public String getContrasena() {
-        return passwordField.getText();
+        return new String(passwordField.getPassword()).trim();
     }
+
 
     public void addActionListener(ActionListener listener) {
         iniciar.addActionListener(listener);
