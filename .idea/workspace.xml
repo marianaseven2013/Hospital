@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91754244-62aa-48c4-9604-9ed4f419b121" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/View/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/View/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +38,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DoctorView.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "LoginController",
+    "git-widget-placeholder": "rm-DoctorView",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/genesis/IdeaProjects/Hospital/src/img"
   }
