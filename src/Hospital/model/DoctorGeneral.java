@@ -56,4 +56,6 @@ public class DoctorGeneral {
         this.contraseña = contraseña;
     }
 
+
+
 }
