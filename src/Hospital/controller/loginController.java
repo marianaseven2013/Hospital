@@ -2,6 +2,7 @@ package Hospital.controller;
 
 import Hospital.model.DoctorGeneral;
 import backEnde.BackEnde;
+import Hospital.View.DoctorView;
 import Hospital.View.LoginView;
 import java.util.HashMap;
 
@@ -13,31 +14,23 @@ public class loginController {
     public loginController(LoginView loginView, BackEnde backEnde) {
         this.loginView = loginView;
         this.backEnde = backEnde;
-        this.loginView.addActionListener(e -> processLogin());
+        this.loginView.addActionListener(e -> iniciarSesion());
     }
 
-
-    private void processLogin() {
+    private void iniciarSesion() {
         String usuario = loginView.getCorreo();
         String password = loginView.getContrasena();
 
         DoctorGeneral doctor = backEnde.validarDatos(usuario, password);
 
         if (doctor != null) {
-            System.out.println("Estan en:");
-            System.out.println("Correo: " + doctor.getCorreo());
-            System.out.println("Contraseña: " + doctor.getContraseña());
-            System.out.println("Especialidad: " + doctor.getEspecialidad());
+            HashMap<String, String> doctorData = new HashMap<>();
+            doctorData.put("nombre", doctor.getNombre());
+            doctorData.put("especialidad", doctor.getEspecialidad());
+
+            DoctorView doctorView = new DoctorView(doctorData);
         } else {
             System.out.println("Error: Usuario o contraseña incorrectos");
         }
     }
-
-
 }
-
-
-
-
-
-
