@@ -30,4 +30,5 @@ public class DoctorGeneral {
     public String getContraseña() {
         return contraseña;
     }
+
 }

@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital/model/DoctorGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/model/DoctorGeneral.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backEnde/BackEnde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backEnde/BackEnde.java" afterDir="false" />
     </list>
@@ -38,11 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.DoctorView.executor": "Run",
-    "Application.Login.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "rm-carga-DoctorView",
+
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/sofia/IdeaProjects/Hospital/src/Resources",
     "project.structure.last.edited": "Project",
@@ -55,6 +52,20 @@
       <recent name="$PROJECT_DIR$/src/Resources" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Hospital" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,5 +76,27 @@
       <updated>1724851892976</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Hospital/View/DoctorView.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
