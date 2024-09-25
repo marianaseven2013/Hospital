@@ -2,11 +2,13 @@ package Hospital.View;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.HashMap;
 
 public class DoctorView extends JFrame {
     private int[] pantalla = {1300, 800};
 
-    public DoctorView() {
+    //HashMap
+    public DoctorView(HashMap<String, String> doctorData) {
         setTitle("Perfil del Doctor");
         setSize(pantalla[0], pantalla[1]);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -18,32 +20,28 @@ public class DoctorView extends JFrame {
         headerPanel.setBackground(Color.DARK_GRAY);
         headerPanel.setLayout(new BorderLayout());
 
-
         JLabel hospitalLabel = new JLabel("Hospital Santa Catalina");
         hospitalLabel.setForeground(Color.WHITE);
         hospitalLabel.setFont(new Font("Arial", Font.BOLD, 18));
         headerPanel.add(hospitalLabel, BorderLayout.WEST);
 
-        //Cuadro para el cuadro anaranjado y el nombre
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(new BorderLayout());
         rightPanel.setBackground(Color.DARK_GRAY);
 
-
         JPanel yellowBox = new JPanel();
         yellowBox.setPreferredSize(new Dimension(50, 50));
-        yellowBox.setBackground(Color.orange);
-
+        yellowBox.setBackground(Color.ORANGE);
 
         JPanel namePanel = new JPanel();
         namePanel.setLayout(new GridLayout(2, 1));
         namePanel.setBackground(Color.DARK_GRAY);
 
-        JLabel nameLabel = new JLabel("Génesis Luch");
+        JLabel nameLabel = new JLabel(doctorData.get("nombre"));
         nameLabel.setForeground(Color.WHITE);
         nameLabel.setFont(new Font("Arial", Font.BOLD, 18));
 
-        JLabel specialtyLabel = new JLabel("Doctora General");
+        JLabel specialtyLabel = new JLabel(doctorData.get("especialidad"));
         specialtyLabel.setForeground(Color.WHITE);
         specialtyLabel.setFont(new Font("Arial", Font.PLAIN, 14));
 
@@ -53,12 +51,9 @@ public class DoctorView extends JFrame {
         rightPanel.add(yellowBox, BorderLayout.WEST);
         rightPanel.add(namePanel, BorderLayout.CENTER);
 
-
         headerPanel.add(rightPanel, BorderLayout.EAST);
 
-        // Añadir el header al JFrame
         add(headerPanel, BorderLayout.NORTH);
-
 
         JPanel emptyPanel = new JPanel();
         emptyPanel.setBackground(Color.WHITE);
@@ -68,6 +63,10 @@ public class DoctorView extends JFrame {
     }
 
     public static void main(String[] args) {
-        new DoctorView();
+        HashMap<String, String> dummyData = new HashMap<>();
+        dummyData.put("nombre", "Génesis Luch");
+        dummyData.put("especialidad", "Doctora General");
+
+        new DoctorView(dummyData);
     }
 }
