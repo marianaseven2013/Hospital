@@ -9,7 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital/model/DoctorGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/model/DoctorGeneral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/services/DataDoctores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/services/DataDoctores.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backEnde/BackEnde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backEnde/BackEnde.java" afterDir="false" />
     </list>
@@ -39,10 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Login.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "rm-menu-Lateral",
+
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/sofia/IdeaProjects/Hospital/src/Resources",
     "project.structure.last.edited": "Project",

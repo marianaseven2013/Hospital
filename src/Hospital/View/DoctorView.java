@@ -9,12 +9,7 @@ import java.util.HashMap;
 
 public class DoctorView extends JFrame {
 
-    private int[] pantalla = {1300,800};
 
-    private HashMap<String, String> datosDoctor;
-
-    public DoctorView(HashMap datosDoctor){
-        this.datosDoctor = datosDoctor;
 
         this.setSize(pantalla[0], pantalla[1]);
         this.setLayout(new BorderLayout());
@@ -36,32 +31,12 @@ public class DoctorView extends JFrame {
         userPanel.setBackground(Color.darkGray);
 
 
-        JPanel representacionLogo = new JPanel();
-        representacionLogo.setPreferredSize(new Dimension(40,40));
-        representacionLogo.setBackground(Color.orange);
-
-        GridBagConstraints restricciones = new GridBagConstraints();
-        restricciones.gridx = 0;
-        restricciones.gridy = 0;
-        restricciones.gridheight = 2;
-        restricciones.insets = new Insets(0,14,0,0);
-
-        userPanel.add(representacionLogo, restricciones);
-
-
-        JLabel nombreDoc = new JLabel(String.valueOf(datosDoctor.get("Nombre")));
-        nombreDoc.setFont(new Font("Arial", Font.BOLD, 15));
-        nombreDoc.setForeground(Color.white);
 
         restricciones.gridx = 1;
         restricciones.gridy = 0;
         restricciones.gridheight = 1;
 
-        userPanel.add(nombreDoc, restricciones);
 
-        JLabel especialidadDoc = new JLabel(String.valueOf(datosDoctor.get("Especialidad")));
-        especialidadDoc.setFont(new Font("Arial", Font.PLAIN, 13));
-        especialidadDoc.setForeground(Color.white);
 
         restricciones.gridx = 1;
         restricciones.gridy = 1;
@@ -70,25 +45,6 @@ public class DoctorView extends JFrame {
 
         userPanel.add(especialidadDoc, restricciones);
 
-        headerPanel.add(userPanel, BorderLayout.EAST);
-        headerPanel.add(nombreHospital, BorderLayout.WEST);
-        this.add(headerPanel, BorderLayout.NORTH);
-        this.add(componenteMenuLateral(), BorderLayout.WEST);
-        this.setVisible(true);
-
-    }
-
-    private JPanel componenteMenuLateral(){
-
-        JPanel panelMenu = new JPanel();
-        panelMenu.setPreferredSize(new Dimension(250, pantalla[1]));
-        panelMenu.setBackground(Color.darkGray);
-
-        JPanel menu = new JPanel(new GridBagLayout());
-
-        GridBagConstraints restricciones = new GridBagConstraints();
-        restricciones.fill = GridBagConstraints.HORIZONTAL;
-        restricciones.gridx = 0;
 
 
         menu.add(crearBoton("Opción 1"), restricciones);
@@ -101,13 +57,6 @@ public class DoctorView extends JFrame {
         return panelMenu;
     }
 
-    private JButton crearBoton(String texto){
-        JButton boton = new JButton(texto);
 
-        boton.addActionListener(e -> {
-            System.out.println(texto);
-        });
-
-        return boton;
     }
 }

@@ -12,15 +12,7 @@ public class loginController {
 
     public loginController(LoginView loginView){
         this.loginView = loginView;
-        this.loginView.addActionListener(e -> iniciar());
-    }
 
-
-    public  void iniciar(){
 
         HashMap validar = BackEnde.validarDato(loginView.getCorreo(), loginView.getContrasena());
 
-        DoctorView doctorView = new DoctorView(validar);
-    }
-
-}
