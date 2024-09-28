@@ -1,17 +1,15 @@
-import Hospital.services.DataDoctores;
-import Hospital.model.DoctorGeneral;
-import Hospital.View.LoginView;
+
+import javax.swing.*;
+
 import Hospital.controller.loginController;
-import backEnde.BackEnde;
+import Hospital.View.LoginView;
 
-import java.util.ArrayList;
-
-public class Main {
+public class Main extends JFrame {
     public static void main(String[] args) {
-        LoginView loginView = new LoginView();
 
-        BackEnde backEnde = new BackEnde();
+        LoginView view = new LoginView();
 
-        new loginController(loginView, backEnde);
+        loginController controller = new loginController(view);
+
     }
 }
