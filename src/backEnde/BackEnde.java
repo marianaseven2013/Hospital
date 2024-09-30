@@ -3,32 +3,39 @@ package backEnde;
 import Hospital.model.DoctorGeneral;
 import Hospital.services.DataDoctores;
 
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BackEnde {
-    private ArrayList<DoctorGeneral> data;
 
-    public BackEnde() {
-        data = new ArrayList<>();
-        data.add(new DoctorGeneral("Dr. Juan Kook", "jjkkk.kook@bhospitaldd.com", "Cardiología", "jkkkook", "bag23"));
-        data.add(new DoctorGeneral("Dra. Jinna Kikm", "jinna.kikm@bhospitaldd.com", "Dermatología", "jinnakm", "tan43"));
-        data.add(new DoctorGeneral("Dr. Ricardo Morales", "ricardo.morales@bhospitaldd.com", "Pediatría", "ricardMo", "bamm56"));
-        data.add(new DoctorGeneral("Dra. Agustina Minn", "agustina.minn@bhospitaldd.com", "Traumatología", "agustM", "portyyea43"));
-        data.add(new DoctorGeneral("Dr. Tauren Huyn", "tauren.huyn@bhospitaldd.com", "Neurología", "taurenh", "niagarapo"));
-    }
+    public static HashMap<String, String> validarDatos(String user, String password) {
 
-    public DoctorGeneral validarDatos(String usuario, String contraseña) {
-        System.out.println("Validando usuario: " + usuario + " con contraseña: " + contraseña);
+        ArrayList<DoctorGeneral> doctores = DataDoctores.listaDoctores();
 
-        for (DoctorGeneral doctor : data) {
-            System.out.println("Revisando doctor: " + doctor.getCorreo() + " con contraseña: " + doctor.getContraseña());
-            if (doctor.getCorreo().equals(usuario) && doctor.getContraseña().equals(contraseña)) {
-                System.out.println("Doctor encontrado: " + doctor.getNombre());
-                return doctor;
+        for (DoctorGeneral infDoc : doctores) {
+
+            if (infDoc.getEmail().equalsIgnoreCase(user) || infDoc.getUsuario().equalsIgnoreCase(user)) {
+                if (infDoc.getPasswordD().equalsIgnoreCase(password)) {
+
+                    HashMap<String, String> datosDoctor = new HashMap<>();
+                    datosDoctor.put("nombre doctor", infDoc.getNombre());
+                    datosDoctor.put("apellido doctor", infDoc.getApellido());
+                    datosDoctor.put("especialidad", infDoc.getEspecialidad());
+                    datosDoctor.put("password", infDoc.getPasswordD());
+                    datosDoctor.put("email", infDoc.getEmail());
+                    datosDoctor.put("usuario", infDoc.getUsuario());
+
+                    System.out.println(datosDoctor.entrySet());
+                    return datosDoctor;
+                }
             }
         }
-        System.out.println("Doctor no encontrado.");
-        return null;
+
+        HashMap<String, String> datosDoctor = new HashMap<>();
+        datosDoctor.put("Error", "¡¡ERROR!! Verifique usuario o contraseña");
+        System.out.println(datosDoctor.get("Error"));
+
+        return datosDoctor;
     }
 }

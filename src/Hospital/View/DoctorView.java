@@ -1,17 +1,25 @@
 package Hospital.View;
 
-import Hospital.services.DataDoctores;
 import backEnde.BackEnde;
+import Hospital.model.Paciente;
+import Hospital.services.DataPacientes;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DoctorView extends JFrame {
-    private int[] pantalla = {1300, 800};
 
-    public DoctorView(HashMap<String, String> doctorData) {
+    private int[] pantalla = {1300,800};
+    private ArrayList<Paciente> pacienteList = DataPacientes.listaPacientes();
+
+
+    private HashMap<String, String> datosDoctor;
+
+    public DoctorView(HashMap datosDoctor){
+        this.datosDoctor = datosDoctor;
 
         this.setSize(pantalla[0], pantalla[1]);
         this.setLayout(new BorderLayout());
@@ -23,59 +31,63 @@ public class DoctorView extends JFrame {
         headerPanel.setPreferredSize(new Dimension(1300, 60));
         headerPanel.setBackground(Color.darkGray);
 
-        JLabel nombreHospital = new JLabel("Hospital Santa Catalina");
-        nombreHospital.setForeground(Color.white);
-        nombreHospital.setFont(new Font("Arial", Font.BOLD, 16));
-        nombreHospital.setBorder(new EmptyBorder(0, 30, 0, 0)); // establece un margen
+        JLabel nomHospital = new JLabel("Hospital Santa Catalina");
+        nomHospital.setForeground(Color.white);
+        nomHospital.setFont(new Font("Arial", Font.BOLD, 16));
+        nomHospital.setBorder(new EmptyBorder(0, 30, 0, 0)); // establece un margen
 
         JPanel userPanel = new JPanel(new GridBagLayout());
-        userPanel.setPreferredSize(new Dimension(270, 60));
+        userPanel.setPreferredSize(new Dimension(270,60));
         userPanel.setBackground(Color.darkGray);
 
 
         JPanel representacionLogo = new JPanel();
-        representacionLogo.setPreferredSize(new Dimension(40, 40));
+        representacionLogo.setPreferredSize(new Dimension(40,40));
         representacionLogo.setBackground(Color.orange);
 
         GridBagConstraints restricciones = new GridBagConstraints();
         restricciones.gridx = 0;
         restricciones.gridy = 0;
         restricciones.gridheight = 2;
-        restricciones.insets = new Insets(0, 14, 0, 0);
+        restricciones.insets = new Insets(0,14,0,0);
 
         userPanel.add(representacionLogo, restricciones);
 
 
-        System.out.println("Nombre del doctor en DoctorView: " + doctorData.get("nombre"));
-        System.out.println("Especialidad del doctor en DoctorView: " + doctorData.get("especialidad"));
-
-        JLabel nameLabel = new JLabel(doctorData.get("nombre"));
-        nameLabel.setForeground(Color.WHITE);
-        nameLabel.setBounds(34,55,45,544);
-        nameLabel.setFont(new Font("Arial", Font.BOLD, 18));
-
-        JLabel specialtyLabel = new JLabel(doctorData.get("especialidad"));
-        specialtyLabel.setForeground(Color.WHITE);
-        specialtyLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+        JLabel nombreDoc = new JLabel(String.valueOf(datosDoctor.get("nombre doctor")));
+        nombreDoc.setFont(new Font("Arial ", Font.BOLD, 15));
+        nombreDoc.setForeground(Color.white);
 
         restricciones.gridx = 1;
         restricciones.gridy = 0;
         restricciones.gridheight = 1;
+
+        userPanel.add(nombreDoc, restricciones);
+
+        JLabel especialidadDoc = new JLabel(String.valueOf(datosDoctor.get("especialidad")));
+        especialidadDoc.setFont(new Font("Liberation Sans", Font.PLAIN, 13));
+        especialidadDoc.setForeground(Color.white);
+
+        restricciones.gridx = 1;
+        restricciones.gridy = 1;
+        restricciones.gridheight = 2;
         restricciones.anchor = GridBagConstraints.WEST;
 
-        userPanel.add(nameLabel, restricciones);
-        userPanel.add(specialtyLabel, restricciones);
+        userPanel.add(especialidadDoc, restricciones);
 
         headerPanel.add(userPanel, BorderLayout.EAST);
-        headerPanel.add(nombreHospital, BorderLayout.WEST);
+        headerPanel.add(nomHospital, BorderLayout.WEST);
         this.add(headerPanel, BorderLayout.NORTH);
         this.add(componenteMenuLateral(), BorderLayout.WEST);
+        this.add(PacienteView.panelPaciente(pacienteList));
         this.setVisible(true);
 
     }
 
-    private JPanel componenteMenuLateral() {
 
+    private JPanel componenteMenuLateral(){
+
+        // PANEL BASE DEL MENU
         JPanel panelMenu = new JPanel();
         panelMenu.setPreferredSize(new Dimension(250, pantalla[1]));
         panelMenu.setBackground(Color.darkGray);
@@ -87,17 +99,17 @@ public class DoctorView extends JFrame {
         restricciones.gridx = 0;
 
 
-        menu.add(crearBoton("Opción 1"), restricciones);
-        menu.add(crearBoton("Opción 2"), restricciones);
-        menu.add(crearBoton("Opción 3"), restricciones);
-        menu.add(crearBoton("Opción 4"), restricciones);
-        menu.add(crearBoton("Opción 5"), restricciones);
+        menu.add(crearUnBoton("Consulta del día"), restricciones);
+        menu.add(crearUnBoton("Salas"), restricciones);
+        menu.add(crearUnBoton("Farmacia"), restricciones);
+        menu.add(crearUnBoton("Pacientes Registrados"), restricciones);
+        menu.add(crearUnBoton("Citar en otra area"), restricciones);
 
         panelMenu.add(menu);
         return panelMenu;
     }
 
-    private JButton crearBoton(String texto) {
+    private JButton crearUnBoton(String texto){
         JButton boton = new JButton(texto);
 
         boton.addActionListener(e -> {
@@ -105,12 +117,5 @@ public class DoctorView extends JFrame {
         });
 
         return boton;
-    }
-
-    public static void main(String[] args) {
-        HashMap<String, String> dummyData = new HashMap<>();
-        dummyData.put("Nombre", "Dr. Luis reyes");
-        dummyData.put("Especialidad", "Cirujano");
-        new DoctorView(dummyData);
     }
 }
