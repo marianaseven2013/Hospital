@@ -99,11 +99,11 @@ public class DoctorView extends JFrame {
         restricciones.gridx = 0;
 
 
-        menu.add(crearUnBoton("Opción 1"), restricciones);
-        menu.add(crearUnBoton("Opción 2"), restricciones);
-        menu.add(crearUnBoton("Opción 3"), restricciones);
-        menu.add(crearUnBoton("Opción 4"), restricciones);
-        menu.add(crearUnBoton("Opción 5"), restricciones);
+        menu.add(crearUnBoton("Consulta del día"), restricciones);
+        menu.add(crearUnBoton("Salas"), restricciones);
+        menu.add(crearUnBoton("Farmacia"), restricciones);
+        menu.add(crearUnBoton("Pacientes Registrados"), restricciones);
+        menu.add(crearUnBoton("Citar en otra area"), restricciones);
 
         panelMenu.add(menu);
         return panelMenu;

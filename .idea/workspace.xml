@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1080fcc2-f862-44de-8eaa-9bae50b93dc8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hospital/View/PacienteView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hospital/controller/DoctorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hospital/model/Paciente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hospital/services/DataPacientes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/View/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/View/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/controller/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/model/DoctorGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/model/DoctorGeneral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/model/Enfermera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/model/Enfermera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hospital/services/DataDoctores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/services/DataDoctores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backEnde/BackEnde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backEnde/BackEnde.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
