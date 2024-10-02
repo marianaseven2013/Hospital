@@ -10,12 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1080fcc2-f862-44de-8eaa-9bae50b93dc8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hospital/View/FarmaciasView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hospital/model/Medicamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hospital/services/DataFarmacia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/View/DoctorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/View/FarmaciasView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/View/FarmaciasView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hospital/services/DataFarmacia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hospital/services/DataFarmacia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/descargas/Hospital.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +57,9 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/descargas" />
     </key>
   </component>
   <component name="RunManager">

@@ -1,5 +1,7 @@
 package Hospital.View;
 
+import Hospital.model.Medicamento;
+import Hospital.services.DataFarmacia;
 import Hospital.services.DataPacientes;
 import Hospital.model.Paciente;
 
@@ -13,6 +15,7 @@ public class DoctorView extends JFrame {
 
     private int[] pantalla = {1300, 800};
     private ArrayList<Paciente> pacienteList = DataPacientes.listaPacientes();
+    private ArrayList<Medicamento>  llm = DataFarmacia.listaMedicamento();
     private HashMap<String, String> datosDoctor;
 
     // Panel que contendrá las diferentes vistas (pacientes, salas, farmacia)
@@ -120,7 +123,7 @@ public class DoctorView extends JFrame {
                     cl.show(panelCentral, "Salas");
                     break;
                 case "Farmacia":
-                    panelCentral.add(FarmaciasView.FarmaciaPP(), "Farmacia");
+                    panelCentral.add(FarmaciasView.panelPaciente(llm), "Farmacia");
                     cl.show(panelCentral, "Farmacia");
                     break;
                 case "Pacientes registrados":
